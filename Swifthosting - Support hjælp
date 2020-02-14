@@ -1,0 +1,29 @@
+[vRP/C#] query exception vRP/set_money : System.AggregateException: One or more errors occurred. (INSERT command denied to user 'us1004911'@'116.203.254.243' for table '_log_cashflow') ---> MySql.Data.MySqlClient.MySqlException: INSERT command denied to user 'us1004911'@'116.203.254.243' for table '_log_cashflow'
+  at MySql.Data.Serialization.PayloadData.ThrowIfError () [0x0001d] in <c9032194188746cfa5d8bb7625c7912b>:0
+  at MySql.Data.Serialization.MySqlSession.TryAsyncContinuation (System.Threading.Tasks.Task`1[TResult] task) [0x00023] in <c9032194188746cfa5d8bb7625c7912b>:0
+  at (wrapper delegate-invoke) System.Func`2[System.Threading.Tasks.Task`1[System.ArraySegment`1[System.Byte]],MySql.Data.Serialization.PayloadData].invoke_TResult_T(System.Threading.Tasks.Task`1<System.ArraySegment`1<byte>>)
+  at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2[TAntecedentResult,TResult].InnerInvoke () [0x00024] in <fbc4ec45371543bfba3678ebb82caf6d>:0
+  at System.Threading.Tasks.Task.Execute () [0x00000] in <fbc4ec45371543bfba3678ebb82caf6d>:0
+--- End of stack trace from previous location where exception was thrown ---
+
+  at MySql.Data.MySqlClient.MySqlDataReader.ActivateResultSet (MySql.Data.MySqlClient.Results.ResultSet resultSet) [0x0000e] in <c9032194188746cfa5d8bb7625c7912b>:0
+  at MySql.Data.MySqlClient.MySqlDataReader.ReadFirstResultSetAsync (MySql.Data.Protocol.Serialization.IOBehavior ioBehavior) [0x000b0] in <c9032194188746cfa5d8bb7625c7912b>:0
+  at MySql.Data.MySqlClient.MySqlDataReader.CreateAsync (MySql.Data.MySqlClient.MySqlCommand command, System.Data.CommandBehavior behavior, MySql.Data.Protocol.Serialization.IOBehavior ioBehavior) [0x0016e] in <c9032194188746cfa5d8bb7625c7912b>:0
+  at MySql.Data.MySqlClient.CommandExecutors.TextCommandExecutor.ExecuteReaderAsync (System.String commandText, MySql.Data.MySqlClient.MySqlParameterCollection parameterCollection, System.Data.CommandBehavior behavior, MySql.Data.Protocol.Serialization.IOBehavior ioBehavior, System.Threading.CancellationToken cancellationToken) [0x001ea] in <c9032194188746cfa5d8bb7625c7912b>:0
+  at MySql.Data.MySqlClient.CommandExecutors.TextCommandExecutor.ExecuteNonQueryAsync (System.String commandText, MySql.Data.MySqlClient.MySqlParameterCollection parameterCollection, MySql.Data.Protocol.Serialization.IOBehavior ioBehavior, System.Threading.CancellationToken cancellationToken) [0x00094] in <c9032194188746cfa5d8bb7625c7912b>:0
+  at vRP.MySQL+<>c__DisplayClass11_2.<e_query>b__0 () [0x0022c] in <8dfc0861f4df44189d833de5e878b97b>:0
+   Exception_EndOfInnerExceptionStack
+---> (Inner Exception #0) MySql.Data.MySqlClient.MySqlException (0x80004005): INSERT command denied to user 'us1004911'@'116.203.254.243' for table '_log_cashflow'
+  at MySql.Data.Serialization.PayloadData.ThrowIfError () [0x0001d] in <c9032194188746cfa5d8bb7625c7912b>:0
+  at MySql.Data.Serialization.MySqlSession.TryAsyncContinuation (System.Threading.Tasks.Task`1[TResult] task) [0x00023] in <c9032194188746cfa5d8bb7625c7912b>:0
+  at (wrapper delegate-invoke) System.Func`2[System.Threading.Tasks.Task`1[System.ArraySegment`1[System.Byte]],MySql.Data.Serialization.PayloadData].invoke_TResult_T(System.Threading.Tasks.Task`1<System.ArraySegment`1<byte>>)
+  at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2[TAntecedentResult,TResult].InnerInvoke () [0x00024] in <fbc4ec45371543bfba3678ebb82caf6d>:0
+  at System.Threading.Tasks.Task.Execute () [0x00000] in <fbc4ec45371543bfba3678ebb82caf6d>:0
+--- End of stack trace from previous location where exception was thrown ---
+
+  at MySql.Data.MySqlClient.MySqlDataReader.ActivateResultSet (MySql.Data.MySqlClient.Results.ResultSet resultSet) [0x0000e] in <c9032194188746cfa5d8bb7625c7912b>:0
+  at MySql.Data.MySqlClient.MySqlDataReader.ReadFirstResultSetAsync (MySql.Data.Protocol.Serialization.IOBehavior ioBehavior) [0x000b0] in <c9032194188746cfa5d8bb7625c7912b>:0
+  at MySql.Data.MySqlClient.MySqlDataReader.CreateAsync (MySql.Data.MySqlClient.MySqlCommand command, System.Data.CommandBehavior behavior, MySql.Data.Protocol.Serialization.IOBehavior ioBehavior) [0x0016e] in <c9032194188746cfa5d8bb7625c7912b>:0
+  at MySql.Data.MySqlClient.CommandExecutors.TextCommandExecutor.ExecuteReaderAsync (System.String commandText, MySql.Data.MySqlClient.MySqlParameterCollection parameterCollection, System.Data.CommandBehavior behavior, MySql.Data.Protocol.Serialization.IOBehavior ioBehavior, System.Threading.CancellationToken cancellationToken) [0x001ea] in <c9032194188746cfa5d8bb7625c7912b>:0
+  at MySql.Data.MySqlClient.CommandExecutors.TextCommandExecutor.ExecuteNonQueryAsync (System.String commandText, MySql.Data.MySqlClient.MySqlParameterCollection parameterCollection, MySql.Data.Protocol.Serialization.IOBehavior ioBehavior, System.Threading.CancellationToken cancellationToken) [0x00094] in <c9032194188746cfa5d8bb7625c7912b>:0
+  at vRP.MySQL+<>c__DisplayClass11_2.<e_query>b__0 () [0x0022c] in <8dfc0861f4df44189d833de5e878b97b>:0 <---
